@@ -41,6 +41,16 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        comma {
+            bindings = <&kp COMMA>;
+            key-positions = <31 30>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
