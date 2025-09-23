@@ -56,6 +56,11 @@
             bindings = <&kp RETURN>;
             key-positions = <21 33>;
         };
+
+        scroll {
+            bindings = <&mo 5>;
+            key-positions = <32 31>;
+        };
     };
 
     macros {
