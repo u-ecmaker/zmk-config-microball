@@ -49,7 +49,7 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <32 19>;
+            key-positions = <32 18>;
         };
 
         return {
@@ -70,6 +70,11 @@
         nextClick {
             bindings = <&mkp MB5>;
             key-positions = <30 31>;
+        };
+
+        return2 {
+            bindings = <&kp RETURN>;
+            key-positions = <9 21>;
         };
     };
 
@@ -106,10 +111,10 @@
 
         default_layer {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R                          &kp T                                            &kp Y                        &kp U  &mt INSERT I  &kp O      &mt LC(PRINTSCREEN) P
-&mt LCTRL A                  &kp S         &kp D         &kp F                          &kp G        &kp LS(LG(S))      &kp COMMA        &kp H                        &kp J  &lt 5 K       &kp L      &lt_to_layer_0 4 ENTER
-&mt LEFT_SHIFT Z             &kp X         &kp C         &kp V                          &kp B        &kp COLON          &kp DOT          &kp N                        &kp M  &mkp LCLK     &mkp RCLK  &mt LEFT_SHIFT MINUS
-&lt_to_layer_0 6 INT_HENKAN  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 INT_MUHENKAN  &lt 2 SPACE  &kp LCTRL          &lt 1 BACKSPACE  &lt_to_layer_0 3 INT_HENKAN                                  &mt LCTRL SLASH
+&kp Q                        &kp W         &kp E         &kp R                        &kp T                                            &kp Y                        &kp U  &mt INSERT I  &kp O      &mt LC(PRINTSCREEN) P
+&mt LCTRL A                  &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))      &kp COMMA        &kp H                        &kp J  &lt 5 K       &kp L      &lt_to_layer_0 4 ENTER
+&mt LEFT_SHIFT Z             &kp X         &kp C         &kp V                        &kp B        &kp COLON          &kp DOT          &kp N                        &kp M  &mkp LCLK     &mkp RCLK  &mt LEFT_SHIFT MINUS
+&lt_to_layer_0 6 INT_HENKAN  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 2 SPACE  &kp LCTRL          &lt 1 BACKSPACE  &lt_to_layer_0 3 LANGUAGE_1                                  &mt LCTRL SLASH
             >;
 
             sensor-bindings =
