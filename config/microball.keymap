@@ -32,14 +32,14 @@
             key-positions = <11 12>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+        middleClick {
+            bindings = <&mkp MB3>;
             key-positions = <20 21>;
         };
 
         eq {
             bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            key-positions = <8 9>;
         };
 
         comma {
@@ -50,6 +50,11 @@
         dot {
             bindings = <&kp DOT>;
             key-positions = <32 30>;
+        };
+
+        return {
+            bindings = <&kp RETURN>;
+            key-positions = <21 33>;
         };
     };
 
@@ -88,8 +93,8 @@
             bindings = <
 &kp Q                        &kp W         &kp E         &kp R                          &kp T                                            &kp Y                        &kp U  &mt INSERT I  &kp O      &mt LC(PRINTSCREEN) P
 &mt LCTRL A                  &kp S         &kp D         &kp F                          &kp G        &kp LS(LG(S))      &kp COMMA        &kp H                        &kp J  &lt 5 K       &kp L      &lt_to_layer_0 4 ENTER
-&mt LEFT_SHIFT Z             &kp X         &kp C         &kp V                          &kp B        &kp COLON          &kp DOT          &kp N                        &kp M  &mkp LCLK     &mkp RCLK  &mt LEFT_SHIFT SLASH
-&lt_to_layer_0 6 INT_HENKAN  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 INT_MUHENKAN  &lt 2 SPACE  &kp LCTRL          &lt 1 BACKSPACE  &lt_to_layer_0 3 INT_HENKAN                                  &mt LCTRL MINUS
+&mt LEFT_SHIFT Z             &kp X         &kp C         &kp V                          &kp B        &kp COLON          &kp DOT          &kp N                        &kp M  &mkp LCLK     &mkp RCLK  &mt LEFT_SHIFT MINUS
+&lt_to_layer_0 6 INT_HENKAN  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 INT_MUHENKAN  &lt 2 SPACE  &kp LCTRL          &lt 1 BACKSPACE  &lt_to_layer_0 3 INT_HENKAN                                  &mt LCTRL SLASH
             >;
 
             sensor-bindings =
