@@ -34,7 +34,7 @@
 
         middleClick {
             bindings = <&mkp MB3>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
         };
 
         eq {
@@ -44,12 +44,12 @@
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <31 30>;
+            key-positions = <31 18>;
         };
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <32 30>;
+            key-positions = <32 19>;
         };
 
         return {
@@ -60,6 +60,16 @@
         scroll {
             bindings = <&mo 5>;
             key-positions = <32 31>;
+        };
+
+        browserBack {
+            bindings = <&mkp MB4>;
+            key-positions = <29 31>;
+        };
+
+        nextClick {
+            bindings = <&mkp MB5>;
+            key-positions = <30 31>;
         };
     };
 
