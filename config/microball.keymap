@@ -58,7 +58,7 @@
         };
 
         scroll {
-            bindings = <&mo 5>;
+            bindings = <&mo 7>;
             key-positions = <32 31>;
         };
 
@@ -89,11 +89,16 @@
         rdp_switch: rdp_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &kp LALT>
-                     , <&macro_pause_for_release>
-                     , <&macro_tap &kp HOME>
-                     , <&macro_pause_for_release>
-                     , <&macro_release &kp LCTRL &kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LALT>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&kp HOME>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT>;
+
             label = "RDP_SWITCH";
         };
     };
@@ -120,25 +125,32 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_win {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R                        &kp T                                            &kp Y                        &kp U  &mt INSERT I  &kp O      &mt LC(PRINTSCREEN) P
-&mt LCTRL A                  &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))      &kp APOS         &kp H                        &kp J  &lt 5 K       &kp L      &lt_to_layer_0 4 ENTER
-&mt LEFT_SHIFT Z             &kp X         &kp C         &kp V                        &kp B        &kp COLON          &kp GRAVE        &kp N                        &kp M  &mkp LCLK     &mkp RCLK  &mt LEFT_SHIFT MINUS
-&lt_to_layer_0 6 INT_HENKAN  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 2 SPACE  &kp LCTRL          &lt 1 BACKSPACE  &lt_to_layer_0 3 LANGUAGE_1                                  &mt LCTRL SLASH
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                                     &kp Y                        &kp U  &mt INSERT I  &kp O      &mt LC(PRINTSCREEN) P
+&mt LCTRL A       &kp S         &kp D         &kp F                        &kp G        &trans                      &kp APOS         &kp H                        &kp J  &lt 7 K       &kp L      &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &lt_to_layer_0 8 COLON      &kp GRAVE        &kp N                        &kp M  &mkp LCLK     &mkp RCLK  &mt LEFT_SHIFT MINUS
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 LANGUAGE_2  &lt 3 SPACE  &kp LCTRL                   &lt 4 BACKSPACE  &lt_to_layer_0 5 LANGUAGE_1                                  &mt LCTRL SLASH
             >;
 
-            sensor-bindings =
-                <&scroll_up_down>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
-        FUNCTION {
+        default_iPad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        SYMBOLS {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
@@ -148,6 +160,15 @@
 &kp KP_NUMBER_0             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+            >;
+        };
+
+        FUNCTION {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
             >;
         };
 
@@ -167,7 +188,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &mkp MB5  &trans    &trans
-&kp A   &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
@@ -180,7 +201,7 @@
             >;
         };
 
-        layer_6 {
+        bluetooth {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
