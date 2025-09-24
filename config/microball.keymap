@@ -17,7 +17,7 @@
     combos {
         compatible = "zmk,combos";
 
-        muhennkann {
+        escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
