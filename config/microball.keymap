@@ -147,10 +147,10 @@
 
         SYMBOLS {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp EXCLAMATION    &kp PERCENT  &kp AMPERSAND                      &kp SQT           &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans            &kp EQUAL
+&kp AT           &kp SINGLE_QUOTE   &kp DOUBLE_QUOTES  &trans       &trans         &trans      &trans  &kp HASH          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp COLON
+&trans           &trans             &trans             &trans       &trans         &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp LESS_THAN          &kp GREATER_THAN  &kp SEMI
+&trans           &trans             &trans             &trans       &trans         &trans      &trans  &trans                                                                           &kp EXCLAMATION
             >;
         };
 
