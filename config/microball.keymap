@@ -64,17 +64,27 @@
 
         browserBack {
             bindings = <&mkp MB4>;
-            key-positions = <29 31>;
+            key-positions = <31 30>;
         };
 
         nextClick {
             bindings = <&mkp MB5>;
-            key-positions = <30 31>;
+            key-positions = <31 29>;
         };
 
         return2 {
             bindings = <&kp RETURN>;
             key-positions = <9 21>;
+        };
+
+        ctrlZ {
+            bindings = <&kp LC(Z)>;
+            key-positions = <18 19>;
+        };
+
+        ctrlY {
+            bindings = <&kp LC(Y)>;
+            key-positions = <19 17>;
         };
     };
 
@@ -183,7 +193,7 @@
             bindings = <
 &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp EXCLAMATION    &kp PERCENT  &kp AMPERSAND                      &kp SQT           &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans            &kp EQUAL
 &kp AT           &kp SINGLE_QUOTE   &kp DOUBLE_QUOTES  &trans       &trans         &trans      &trans  &kp HASH          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &kp COLON
-&trans           &trans             &trans             &trans       &trans         &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp LESS_THAN          &kp GREATER_THAN  &kp SEMI
+&trans           &trans             &trans             &trans       &kp BACKSLASH  &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp LESS_THAN          &kp GREATER_THAN  &kp SEMI
 &trans           &trans             &trans             &trans       &trans         &trans      &trans  &trans                                                                           &kp EXCLAMATION
             >;
         };
